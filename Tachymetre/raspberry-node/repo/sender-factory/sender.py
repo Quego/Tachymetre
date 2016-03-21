@@ -1,9 +1,9 @@
-from pelix.ipopo.decorators import ComponentFactory, Provides
+from pelix.ipopo.decorators import ComponentFactory, Provides, Requires
 
-@ComponentFactory("sender-factory.sender")
+@ComponentFactory("sender-factory")
 @Provides("GetDonneesElaboreesService")
 @Provides("GetPresenceService")
-@Requires("aggregator", "GetDonneesElaboreesService")
+@Requires("_aggregator", "GetDonneesElaboreesAggregatorService")
 class Sender(object):
 
 	def __init__(self):
@@ -21,9 +21,10 @@ class Sender(object):
 
 	def get_donnees_elaborees(self, timestamp, vitesse_max, vitesse_moy, sens):
 		if self.aggregator is not None:
+			self.presence = True
 			self.send_donnees_elaborees
 		else:
 			self.presence = False
 
 	def send_donnees_elaborees(timestamp, vitesse_max, vitesse_moy, sens):
-		self.aggregator.get_donnees_elaborees(vitesse, sens)
+		self.aggregator.get_donnees_elaborees(timestamp, vitesse_max, vitesse_moy, sens)

@@ -1,9 +1,10 @@
-from pelix.ipopo.decorators import ComponentFactory, Provides
+from pelix.ipopo.decorators import ComponentFactory, Provides, Requires
 import sqlite3
 
-@ComponentFactory("serveur-factory.serveur")
+@ComponentFactory("serveur-factory")
 @Provides("StoreDonneesElaboreesService")
 @Provides("LoadDonneesElaboreesService")
+@Provides("ShowDonneesService")
 class Serveur(object):
 
 	def __init__(self):
@@ -21,7 +22,7 @@ class Serveur(object):
 		conn.close()
 
 	def store_donnees_elaborees(self, timestamp, vitesse_max, vitesse_moy, sens):
-		# Ecriture dans la base de données
+		# Ecriture dans la base de donnees
 		conn = sqlite3.connect('base.db')
 		data = {"timestamp" : timestamp, "vitesse_max" : vitesse_max, "vitesse_moy" : vitesse_moy, "sens" : sens}
 		cursor.execute("""
@@ -30,7 +31,7 @@ class Serveur(object):
 		conn.close()
 
 	def load_donnees_elaborees(self):
-		# Lecture de la base de données
+		# Lecture de la base de donnees
 		conn = sqlite3.connect('base.db')
 		cursor.execute("""
 			SELECT timestamp, vitesse_max, vitesse_moy, sens FROM mesures

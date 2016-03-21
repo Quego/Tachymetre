@@ -1,9 +1,9 @@
-from pelix.ipopo.decorators import ComponentFactory, Provides
+from pelix.ipopo.decorators import ComponentFactory, Provides, Requires
 
-@ComponentFactory("apirest-factory.apirest")
+@ComponentFactory("apirest-factory")
 @Provides("ShowDonneesService")
-@Requires("aggregator", "ShowEtatService")
-@Requires("serveur", "ReadDonneesElaboreesService")
+@Requires("_aggregator", "ShowEtatService")
+@Requires("_serveur", "ReadDonneesElaboreesService")
 class Apirest(object):
 
 	def __init__(self):

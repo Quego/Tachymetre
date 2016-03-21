@@ -1,6 +1,6 @@
-from pelix.ipopo.decorators import ComponentFactory, Provides
+from pelix.ipopo.decorators import ComponentFactory, Provides, Requires
 
-@ComponentFactory("cache-factory.cache")
+@ComponentFactory("cache-factory")
 @Provides("SaveDonneesElaboreesService")
 @Provides("PushDonneesElaboreesService")
 class Cache(object):
@@ -9,14 +9,20 @@ class Cache(object):
 		return 50
 
 	def save_donnees_elaborees(self, timestamp, vitesse_max, vitesse_moy, sens):
-		# TODO sauvegarde dans un fichier
-		# OU
-		# TODO sauvegarde en mémoire dans une liste
-		return "TODO"
+		# On rajoute les donnees a sauvegarder dans le cache
+		f = open("cache.txt", "a")
+		# Format : timestamp/vitesse_max/vitesse_moy/sens
+		f.write(str(timestamp) + "/" + str(vitesse_max) + "/" + str(vitesse_moy) + "/" + str(sens) + "\n")
+		f.close()
 
-	# TODO liaison avec le sync
 	def push_donnees_elaborees(self):
-		# TODO lecture du fichier de sauvegarde
-		# OU
-		# TODO envoie direct de la liste en mémoire
-		return "TODO"
+		# Lecture du cache
+		f = open("cache.txt", "r")
+		# Recuperation des donnees mise en cache
+		donnees = f.read()
+		f.close()
+		# Reinitialisation du cache
+		f = open("cache.txt", "w")
+		f.write("")
+		f.close()
+		return donnees

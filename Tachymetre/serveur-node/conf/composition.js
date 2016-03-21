@@ -28,7 +28,6 @@
                 "factory" : "sync-factory",
                 "node"    : "raspberry-node"
             },
-
             {
                 "name"    : "aggregator",
                 "factory" : "aggregator-factory",
@@ -48,7 +47,7 @@
                 "name"    : "serveur",
                 "factory" : "serveur-factory",
                 "node"    : "serveur-node"
-            },
+            }
         ]
     }
 }
