@@ -36,12 +36,22 @@
             {
                 "name"    : "apirest",
                 "factory" : "apirest-factory",
-                "node"    : "serveur-node"
+                "node"    : "serveur-node",
+                "properties" : {
+					"poll.delta" : 1
+				}
             },
             {
                 "name"    : "interfaceutilisateur",
                 "factory" : "interfaceutilisateur-factory",
-                "node"    : "serveur-node"
+                "isolate" : "web.interface",
+                "node"    : "serveur-node",
+                "properties" : {
+					"servlet.path" : "/PythonSensor"
+				},
+				"wires" : {
+					"_apirest" : "apirest"
+				}
             },
             {
                 "name"    : "serveur",
