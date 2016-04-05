@@ -98,7 +98,7 @@ class Apirest(object):
 			try:
 				data = self._serveur.load_donnees_elaborees(self._cpt)
 				for row in data:
-					self._store("toto", row[0], row[1], row[2], row[3])
+					self._store("Tachymetre", row[0], row[1], row[2], row[3])
 					self._cpt += 1
 			except Exception as ex:
 				_logger.error("Error retrieving sensor data: %s", ex)

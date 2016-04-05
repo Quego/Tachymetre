@@ -48,37 +48,68 @@ class Interfaceutilisateur(object):
 		min_data = self._apirest.get_vitesse_min()
 		max_data = self._apirest.get_vitesse_max()
 
-		min = round(min_data[0][0],0)
-		max = round(max_data[0][0],0)
-		
+		min = 0
+		max = 0
+		try:
+			min = round(min_data[0][0],1)
+			max = round(max_data[0][0],1)
+		except TypeError as ex:
+			_logger.error("Error retrieving sensor data: %s", ex)
+
+
 
 		nb_data = self._apirest.get_vitesse_entre_deux_bornes(min, max)
-		nb = nb_data[0][0]
-		if ((max - min < 2.0) or nb < 5):
+
+		try:
+			nb = nb_data[0][0]
+		except TypeError as ex:
+			_logger.error("Error retrieving sensor data: %s", ex)
+
+
+		if ((max - min < 2.0) or nb < 2):
 			return """	
 			<div id="histogramme">
 			<dl>
 				<dt><a href="#1" title="{min}-{max}">{min}-{max}</a></dt>
-				<dd style="border-bottom-width: 120px; height: 0px;">{nb}</dd>
+				<dd style="border-bottom-width: 200px; height: 0px;">{nb}</dd>
 			</dl>
 			</div>""".format(min=min,max = max, nb = nb)
 		else:
-			step = (max - min)/4
-			step1 = round(min + step,0)
-			step2 = round(min + 2*step,0)
-			step3 = round(min + 3*step,0)
+			step = (max - min)/10
+
+			step1 = round(min + step,1)
+			step2 = round(min + 2*step,1)
+			step3 = round(min + 3*step,1)
+			step4 = round(min + 4*step,1)
+			step5 = round(min + 5*step,1)
+			step6 = round(min + 6*step,1)
+			step7 = round(min + 7*step,1)
+			step8 = round(min + 8*step,1)
+			step9 = round(min + 9*step,1)
 			value1 = self._apirest.get_vitesse_entre_deux_bornes(min, step1)[0][0]
 			value2 = self._apirest.get_vitesse_entre_deux_bornes(step1, step2)[0][0]
 			value3 = self._apirest.get_vitesse_entre_deux_bornes(step2, step3)[0][0]
-			value4 = self._apirest.get_vitesse_entre_deux_bornes(step3, max)[0][0]
-			percent1 = 120*value1/nb
-			percent2 = 120*value2/nb
-			percent3 = 120*value3/nb
-			percent4 = 120*value4/nb
+			value4 = self._apirest.get_vitesse_entre_deux_bornes(step3, step4)[0][0]
+			value5 = self._apirest.get_vitesse_entre_deux_bornes(step4, step5)[0][0]
+			value6 = self._apirest.get_vitesse_entre_deux_bornes(step5, step6)[0][0]
+			value7 = self._apirest.get_vitesse_entre_deux_bornes(step6, step7)[0][0]
+			value8 = self._apirest.get_vitesse_entre_deux_bornes(step7, step8)[0][0]
+			value9 = self._apirest.get_vitesse_entre_deux_bornes(step8, step9)[0][0]
+			value10 = self._apirest.get_vitesse_entre_deux_bornes(step9, max)[0][0]
+			percent1 = 200*value1/nb
+			percent2 = 200*value2/nb
+			percent3 = 200*value3/nb
+			percent4 = 200*value4/nb
+			percent5 = 200*value5/nb
+			percent6 = 200*value6/nb
+			percent7 = 200*value7/nb
+			percent8 = 200*value8/nb
+			percent9 = 200*value9/nb
+			percent10 = 200*value10/nb
 			return """	
 			<div id="histogramme">
 			<dl>
-				<dt><a href="#1" title="{min}-{max}">{min}-{step1}</a></dt>
+				<dt><a href="#1" title="{min}-{step1}">{min}-{step1}</a></dt>
 				<dd style="border-bottom-width: {percent1}px; height: {mpercent1}px;">{value1}</dd>
 			</dl>
 			<dl>
@@ -90,17 +121,50 @@ class Interfaceutilisateur(object):
 				<dd style="border-bottom-width: {percent3}px; height: {mpercent3}px;">{value3}</dd>
 			</dl>
 			<dl>
-				<dt><a href="#4" title="{step3}-{max}">{step3}-{max}</a></dt>
+				<dt><a href="#4" title="{step3}-{step4}">{step3}-{step4}</a></dt>
 				<dd style="border-bottom-width: {percent4}px; height: {mpercent4}px;">{value4}</dd>
 			</dl>
-			</div>""".format(min=min,max = max,
-			nb = nb, step1 = step1, step2 = step2,
-			step3 = step3, value1 = value1, value2 = value2,
-			value3= value3, value4 = value4,
+			<dl>
+				<dt><a href="#5" title="{step4}-{step5}">{step4}-{step5}</a></dt>
+				<dd style="border-bottom-width: {percent5}px; height: {mpercent5}px;">{value5}</dd>
+			</dl>
+			<dl>
+				<dt><a href="#6" title="{step5}-{step6}">{step5}-{step6}</a></dt>
+				<dd style="border-bottom-width: {percent6}px; height: {mpercent6}px;">{value6}</dd>
+			</dl>
+			<dl>
+				<dt><a href="#7" title="{step6}-{step7}">{step6}-{step7}</a></dt>
+				<dd style="border-bottom-width: {percent7}px; height: {mpercent7}px;">{value7}</dd>
+			</dl>
+			<dl>
+				<dt><a href="#8" title="{step7}-{step8}">{step7}-{step8}</a></dt>
+				<dd style="border-bottom-width: {percent8}px; height: {mpercent8}px;">{value8}</dd>
+			</dl>
+			<dl>
+				<dt><a href="#9" title="{step8}-{step9}">{step8}-{step9}</a></dt>
+				<dd style="border-bottom-width: {percent9}px; height: {mpercent9}px;">{value9}</dd>
+			</dl>
+			<dl>
+				<dt><a href="#9" title="{step9}-{max}">{step9}-{max}</a></dt>
+				<dd style="border-bottom-width: {percent10}px; height: {mpercent10}px;">{value10}</dd>
+			</dl>
+			</div>""".format(min=min,max = max,nb = nb,
+			step1 = step1, step2 = step2,
+			step3 = step3, step4 = step4,step5 = step5,
+			step6 = step6,step7 = step7,step8 = step8,step9 = step9,
+			value1 = value1, value2 = value2,value3= value3,
+			value4 = value4,value5 = value5,value6 = value6,
+			value7 = value7,value8 = value8,value9 = value9,value10 = value10,
 			percent1 = percent1, percent2 = percent2,percent3 = percent3,
 			percent4 = percent4,
-			mpercent1 = 120 - percent1, mpercent2 = 120 -percent2,m = 120- percent3,
-			mpercent4 = 120 -percent4)
+			percent5 = percent5, percent6 = percent6,percent7 = percent7,
+			percent8 = percent8,
+			percent9 = percent9, percent10 = percent10,
+			mpercent1 = 200 - percent1, mpercent2 = 200 -percent2,mpercent3 = 200- percent3,
+			mpercent4 = 200 -percent4,
+			mpercent5 = 200 - percent5, mpercent6 = 200 -percent6,mpercent7 = 200- percent7,
+			mpercent8 = 200 -percent8,
+			mpercent9 = 200 - percent9, mpercent10 = 200 -percent10)
 		
 
 	def _make_sensor_part(self, name, history):
@@ -168,11 +232,11 @@ class Interfaceutilisateur(object):
 		}}
 		#histogramme {{
 			display: block;
-			width: 200px;
-			height: 120px;
+			width: 500px;
+			height: 200px;
 			border: 1px solid #333;
 			background-color: #eee;
-			margin: 200px auto;
+			margin: 100px auto;
 		}}
 		dl {{
 			margin: 0;
@@ -181,7 +245,7 @@ class Interfaceutilisateur(object):
 			position: relative;
 			display: block;
 			width: 50px;
-			height: 120px;
+			height: 200px;
 			float: left;
 		}}
 		dt {{
@@ -222,7 +286,7 @@ class Interfaceutilisateur(object):
 			display: block;
 			width: 50px;
 			padding-top: 125px;
-			height: 20px;
+			height: 30px;
 			overflow: hidden;
 			text-align: center;
 		}}
