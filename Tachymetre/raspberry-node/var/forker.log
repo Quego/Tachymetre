@@ -1,0 +1,135 @@
+
+   _____ ____  _    _  ____  _____ _______ ______
+  / ____/ __ \| |  | |/ __ \|  __ \__   __|  ____|
+ | |   | |  | | |__| | |  | | |__) | | |  | |__
+ | |   | |  | |  __  | |  | |  _  /  | |  |  __|
+ | |___| |__| | |  | | |__| | | \ \  | |  | |____
+  \_____\____/|_|  |_|\____/|_|  \_\ |_|  |______|
+
+
+     APPLICATION ID : tachymetre
+          NODE NAME : raspberry-node
+         TRANSPORTS : http
+
+       TOP COMPOSER : False
+
+          HTTP PORT : 0
+         SHELL PORT : 0
+
+
+       COHORTE HOME : /opt/isandlatech/cohorte/cohorte-1.1.1
+       COHORTE BASE : /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/raspberry-node
+       COHORTE DATA : /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/raspberry-node/data
+ PYTHON INTERPRETER : python
+           LOG FILE : /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/raspberry-node/var/forker.log
+
+2016-03-21 14:03:12,594:INFO    :root                :MainThread     : Root log configured. (boot.configure_logger() @476)
+2016-03-21 14:03:12,638:INFO    :cohorte.boot.loaders.forker:MainThread     : Loading a forker with the following properties:
+* Home.....: /opt/isandlatech/cohorte/cohorte-1.1.1
+* Base.....: /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/raspberry-node
+* Node UID.: d1e5677a-291a-4139-b91e-78739856f50a
+* Node Name: raspberry-node
+* Node Data: /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/raspberry-node/data
+* UID......: 23407f25-7a54-4233-8867-d91775d78d7b (forker.load() @253)
+2016-03-21 14:03:12,801:INFO    :pelix.shell.core    :MainThread     : Shell services registered (core.start() @813)
+2016-03-21 14:03:12,870:INFO    :pelix-http-service  :MainThread     : Starting HTTP server: [::]:0 ... (basic.log() @792)
+2016-03-21 14:03:12,875:INFO    :pelix-http-service  :MainThread     : HTTP server started: [::]:38264 (basic.log() @792)
+2016-03-21 14:03:12,882:INFO    :pelix.shell.remote  :MainThread     : RemoteShell validated on port: 55231 (remote.validate() @373)
+2016-03-21 14:03:12,883:INFO    :cohorte.debug.servlet:MainThread     : Debug servlet Ready (servlet.validate() @365)
+2016-03-21 14:03:12,892:INFO    :proxy.proxy         :Herald-Bind    : HTTP Service Proxy validated (proxy.validate() @245)
+2016-03-21 14:03:12,899:INFO    :proxy.proxy         :Herald-Bind    : Bound to / (proxy.bound_to() @260)
+2016-03-21 14:03:12,930:INFO    :cohorte.monitor.status:MainThread     : Monitor status validated (status.validate() @187)
+2016-03-21 14:03:12,984:INFO    :debug.agent         :Herald-Bind    : Debug agent Ready (agent.validate() @490)
+2016-03-21 14:03:13,021:INFO    :cohorte.composer.node.top_store:HeraldNotify-1 : Storing top composition 959bbc70-f101-488b-a09d-7590067637c7 (top_store.store() @114)
+2016-03-21 14:03:13,182:INFO    :cohorte.repositories.python.modules:MainThread     : Loading repository from file system... (modules.validate() @621)
+2016-03-21 14:03:13,500:INFO    :cohorte.monitor.basic:Thread-2       : Monitor core validated (basic.validate() @485)
+2016-03-21 14:03:20,282:INFO    :cohorte.composer.node.criteria.distance.history:HeraldNotify-2 : Using neutral candidate for cache (history.vote() @215)
+2016-03-21 14:03:20,283:INFO    :cohorte.composer.node.criteria.distance.history:HeraldNotify-2 : Vote preference for echantillonneur: Neutral (history.vote() @207)
+2016-03-21 14:03:20,284:INFO    :cohorte.composer.node.criteria.distance.history:HeraldNotify-2 : Vote preference for elaborateur: Neutral (history.vote() @207)
+2016-03-21 14:03:20,284:INFO    :cohorte.composer.node.criteria.distance.history:HeraldNotify-2 : Vote preference for sender: Neutral (history.vote() @207)
+2016-03-21 14:03:20,285:INFO    :cohorte.composer.node.criteria.distance.history:HeraldNotify-2 : Vote preference for sync: Neutral (history.vote() @207)
+2016-03-21 14:03:20,286:INFO    :cohorte.composer.node.history:HeraldNotify-2 : Node composer stored in history:
+{'raspberry-node-python-auto01': (u'cache',
+                                  u'echantillonneur',
+                                  u'elaborateur',
+                                  u'sender',
+                                  u'sync')} (history.store() @120)
+2016-03-21 14:05:20,334:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:05:20,335:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:05:20,335:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:05:20,335:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:05:20,335:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:07:20,360:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:07:20,361:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:07:20,362:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:07:20,364:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:07:20,365:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:09:20,387:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:09:20,388:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:09:20,389:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:09:20,392:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:09:20,392:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:11:20,413:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:11:20,414:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:11:20,414:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:11:20,415:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:11:20,417:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:13:20,439:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:13:20,440:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:13:20,441:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:13:20,442:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:13:20,442:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:15:20,462:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:15:20,463:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:15:20,465:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:15:20,465:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:15:20,466:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:17:20,485:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:17:20,488:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:17:20,489:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:17:20,490:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:17:20,490:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:19:20,511:INFO    :cohorte.composer.node.criteria.distance.history:Thread-10      : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:19:20,514:INFO    :cohorte.composer.node.criteria.distance.history:Thread-10      : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:19:20,515:INFO    :cohorte.composer.node.criteria.distance.history:Thread-10      : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:19:20,516:INFO    :cohorte.composer.node.criteria.distance.history:Thread-10      : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:19:20,517:INFO    :cohorte.composer.node.criteria.distance.history:Thread-10      : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:21:20,539:INFO    :cohorte.composer.node.criteria.distance.history:Thread-11      : Vote preference for cache: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:21:20,539:INFO    :cohorte.composer.node.criteria.distance.history:Thread-11      : Vote preference for echantillonneur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:21:20,540:INFO    :cohorte.composer.node.criteria.distance.history:Thread-11      : Vote preference for elaborateur: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:21:20,540:INFO    :cohorte.composer.node.criteria.distance.history:Thread-11      : Vote preference for sender: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:21:20,541:INFO    :cohorte.composer.node.criteria.distance.history:Thread-11      : Vote preference for sync: raspberry-node-python-auto01 (history.vote() @207)
+2016-03-21 14:22:56,000:CRITICAL:cohorte.monitor.basic:platform-stop  : >>> PLATFORM STOPPING <<< (basic._stop_platform() @401)
+2016-03-21 14:22:56,074:INFO    :cohorte.forker.starters.cohorte_boot:platform-stop  : Waiting for isolate 067d8378-cba4-499d-9577-b0e9bdd62e3d (PID: 26266) to stop... (cohorte_boot.stop() @238)
+2016-03-21 14:22:57,695:INFO    :cohorte.forker.starters.cohorte_boot:platform-stop  : Isolate stopped: 067d8378-cba4-499d-9577-b0e9bdd62e3d (26266) (cohorte_boot.stop() @240)
+2016-03-21 14:22:57,699:INFO    :cohorte.forker.basic:platform-stop  : Sending 'forker stopping' signal. (basic._send_stopping() @356)
+2016-03-21 14:22:57,729:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: 1 crash(es) in history:
+- cache, echantillonneur, elaborateur, sender, sync (history.on_crash() @132)
+2016-03-21 14:22:57,766:INFO    :proxy.proxy         :platform-stop  : Unbound from / (proxy.unbound_from() @267)
+2016-03-21 14:22:57,767:INFO    :proxy.proxy         :platform-stop  : HTTP Service Proxy invalidated (proxy.invalidate() @253)
+2016-03-21 14:22:57,807:INFO    :cohorte.monitor.basic:platform-stop  : Monitor core invalidated (basic.invalidate() @511)
+2016-03-21 14:22:57,809:INFO    :cohorte.monitor.status:platform-stop  : Monitor status invalidated (status.invalidate() @196)
+2016-03-21 14:22:57,810:INFO    :cohorte.forker.basic:platform-stop  : Forker invalidated (basic._invalidate() @438)
+2016-03-21 14:23:00,815:WARNING :IOWatcher-Notify    :platform-stop  : Thread IOWatcher-Notify-0 is still alive... (threadpool.stop() @297)
+2016-03-21 14:23:02,733:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Using neutral candidate for cache (history.vote() @215)
+2016-03-21 14:23:02,734:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Vote preference for echantillonneur: Neutral (history.vote() @207)
+2016-03-21 14:23:02,735:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Vote preference for elaborateur: Neutral (history.vote() @207)
+2016-03-21 14:23:02,735:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Vote preference for sender: Neutral (history.vote() @207)
+2016-03-21 14:23:02,736:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Known bad solution for sync:
+cache, echantillonneur, elaborateur, sender, sync
+due to:
+cache, echantillonneur, elaborateur, sender, sync (history.vote() @193)
+2016-03-21 14:23:02,736:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Using neutral candidate for sync (history.vote() @215)
+2016-03-21 14:23:02,738:INFO    :cohorte.composer.node.history:IOWatcher-Notify-0: Node composer stored in history:
+{'None-python-auto02': (u'cache',
+                        u'echantillonneur',
+                        u'elaborateur',
+                        u'sender'),
+ 'None-python-auto03': (u'sync',)} (history.store() @120)
+2016-03-21 14:23:02,791:INFO    :debug.agent         :platform-stop  : Debug agent Gone (agent.invalidate() @501)
+2016-03-21 14:23:02,793:INFO    :cohorte.debug.servlet:platform-stop  : Debug servlet Gone (servlet.invalidate() @376)
+2016-03-21 14:23:02,928:INFO    :pelix.shell.remote  :platform-stop  : RemoteShell gone from port: 55231 (remote.invalidate() @390)
+2016-03-21 14:23:02,931:INFO    :pelix.shell.core    :platform-stop  : Shell services unregistered (core.stop() @838)
+2016-03-21 14:23:03,579:INFO    :pelix-http-service  :platform-stop  : Shutting down HTTP server: [::]:38264 ... (basic.log() @792)
+2016-03-21 14:23:03,735:INFO    :pelix-http-service  :platform-stop  : Waiting HTTP server ([::]:38264) thread to stop... (basic.log() @792)
+2016-03-21 14:23:03,736:INFO    :pelix-http-service  :platform-stop  : HTTP server down: [::]:38264 ... (basic.log() @792)

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Copyright 2014 isandlaTech (http://isandlatech.com/)
+
+	Licensed under the Apache License, Version 2.0 (the "License"); you may 
+	not use this file
+	except in compliance with the License. You may obtain a copy of the License
+	at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable
+	law or agreed to in writing, software distributed under the License is distributed
+	on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+	express or implied. See the License for the specific language governing 
+	permissions
+	and limitations under the License.
+-->
+
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.cohorte.demos</groupId>
+	<artifactId>temper</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	
+	<packaging>pom</packaging>
+
+	<name>COHORTE Project ::: Tutorials :: Temper </name>
+
+	<url>http://cohorte.github.io/docs/1.x/tutorials/temper</url>
+
+	<profiles>
+		<profile>
+			<id>compile</id>
+			<modules>
+				<module>src</module>
+			</modules>			
+		</profile>
+		<profile>
+			<id>package</id>
+			<build>
+				<plugins>					   
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<configuration>
+							<tasks>
+								<copy todir="python-sensor-node/repo">
+								    <fileset dir="src/">								        
+								        <include name="aggregator/**"/>
+								        <include name="aggregator_ui/**"/>
+								        <include name="python_sensor/**"/>
+								    </fileset>
+								</copy>
+								<copy todir="gateway-node/repo">
+								    <fileset dir="src/">
+								        <include name="aggregator/**"/>
+								        <include name="aggregator_ui/**"/>
+								        <include name="python_sensor/**"/>
+								    </fileset>
+								</copy>	
+								<copy todir="raspberry-node/repo">
+								    <fileset dir="src/">
+								        <include name="aggregator/**"/>
+								        <include name="aggregator_ui/**"/>
+								        <include name="python_sensor/**"/>
+								    </fileset>
+								</copy>		
+								<copy file="src/java_sensor/target/java-sensor-${project.version}.jar" 
+                        tofile="java-sensor-node/repo/java-sensor-${project.version}.jar"/>
+                        		<copy file="src/java_sensor/target/java-sensor-${project.version}.jar" 
+                        tofile="gateway-node/repo/java-sensor-${project.version}.jar"/>
+                        		<copy file="src/aggregator_service/target/aggregator-service-${project.version}.jar" 
+                        tofile="java-sensor-node/repo/aggregator-service-${project.version}.jar"/>
+                        		<copy file="src/aggregator_service/target/aggregator-service-${project.version}.jar" 
+                        tofile="gateway-node/repo/aggregator-service-${project.version}.jar"/>
+                        		<copy file="src/temperature_service/target/temperature-service-${project.version}.jar" 
+                        tofile="java-sensor-node/repo/temperature-service-${project.version}.jar"/>
+                        		<copy file="src/temperature_service/target/temperature-service-${project.version}.jar" 
+                        tofile="gateway-node/repo/temperature-service-${project.version}.jar"/>						
+							</tasks>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>compile</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>  
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<version>2.4.1</version>
+						<executions>
+							<execution>
+								<id>assembly</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>							
+									<descriptors>
+										<descriptor>assembly.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<artifactId>maven-clean-plugin</artifactId>
+						<version>2.6</version>
+						<configuration>
+							<filesets>
+								<fileset>
+									<directory>datashower-node/repo</directory>
+									<excludes><exclude>README*</exclude></excludes>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+								<fileset>
+									<directory>gateway-node/repo</directory>
+									<excludes><exclude>README*</exclude></excludes>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+								<fileset>
+									<directory>java-sensor-node/repo</directory>
+									<excludes><exclude>README*</exclude></excludes>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+								<fileset>
+									<directory>python-sensor-node/repo</directory>
+									<excludes><exclude>README*</exclude></excludes>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+								<fileset>
+									<directory>raspberry-node/repo</directory>
+									<excludes><exclude>README*</exclude></excludes>
+									<followSymlinks>false</followSymlinks>
+								</fileset>
+							</filesets>
+						</configuration>
+					</plugin>
+				</plugins>				
+			</build>
+		</profile>
+	</profiles>
+	
+	<build>
+		<extensions>
+			<!-- Enabling the use of FTP -->
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>1.0-beta-6</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>isandlaTech</name>
+		<url>http://isandlatech.com</url>
+	</organization>
+
+	<issueManagement>
+		<system>Github</system>
+		<url>https://github.com/isandlaTech/cohorte-demos/issues</url>
+	</issueManagement>
+
+	<repositories>
+		<repository>
+			<id>isandlatech.snapshots</id>
+			<name>isandlaTech Snapshot Repository</name>
+			<url>http://repo.isandlatech.com/maven/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>isandlatech.releases</id>
+			<name>isandlaTech Releases Repository</name>
+			<url>http://repo.isandlatech.com/maven/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>isandlatech</id>
+			<name>isandlaTech Releases Repository</name>
+			<url>ftp://isandlatech.com/maven/releases</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<id>isandlatech</id>
+			<name>isandlaTech Snapshots Repository</name>
+			<url>ftp://isandlatech.com/maven/snapshots</url>
+			<uniqueVersion>true</uniqueVersion>
+			<layout>default</layout>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

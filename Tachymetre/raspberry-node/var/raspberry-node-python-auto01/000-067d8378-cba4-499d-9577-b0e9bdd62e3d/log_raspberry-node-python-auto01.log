@@ -1,0 +1,32 @@
+2016-03-21 14:03:20,400:INFO    :root                :MainThread     : Root log configured. (boot.configure_logger() @476)
+2016-03-21 14:03:20,572:INFO    :pelix.shell.core    :MainThread     : Shell services registered (core.start() @813)
+2016-03-21 14:03:20,595:INFO    :pelix.shell.remote  :MainThread     : RemoteShell validated on port: 37261 (remote.validate() @373)
+2016-03-21 14:03:20,595:INFO    :cohorte.debug.servlet:MainThread     : Debug servlet Ready (servlet.validate() @365)
+2016-03-21 14:03:20,615:INFO    :pelix-http-service  :MainThread     : Starting HTTP server: [::]:0 ... (basic.log() @792)
+2016-03-21 14:03:20,621:INFO    :pelix-http-service  :MainThread     : HTTP server started: [::]:34856 (basic.log() @792)
+2016-03-21 14:03:20,633:INFO    :herald.core         :Herald-Bind    : No peer in group all (core.fire_group() @706)
+2016-03-21 14:03:20,634:INFO    :cohorte.monitor.agent:Herald-Bind    : Isolate agent validated (agent.validate() @152)
+2016-03-21 14:03:20,637:INFO    :debug.agent         :Herald-Bind    : Debug agent Ready (agent.validate() @490)
+2016-03-21 14:03:20,684:INFO    :cohorte.monitor.agent:HttpService-34856-Client-('::ffff:130.190.56.78', 49143, 0, 0): Monitors notified of isolate readiness (agent.peer_registered() @126)
+2016-03-21 14:03:20,930:ERROR   :ipopo.core          :HeraldNotify-1 : Error creating the instance 'echantillonneur' from factory 'echantillonneur-factory' (core.instantiate() @681)
+Traceback (most recent call last):
+  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/pelix/ipopo/core.py", line 678, in instantiate
+    instance = factory()
+  File "/home/thibaut/noug/4_eme_annee/Projet/Tachymetre/raspberry-node/repo/echantillonneur-factory/echantillonneur.py", line 12, in __init__
+    self.ser = serial.Serial('/dev/ttyACM0', 9600)
+  File "/usr/lib/python2.7/dist-packages/serial/serialutil.py", line 261, in __init__
+    self.open()
+  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 278, in open
+    raise SerialException("could not open port %s: %s" % (self._port, msg))
+SerialException: could not open port /dev/ttyACM0: [Errno 2] No such file or directory: '/dev/ttyACM0'
+2016-03-21 14:03:20,933:WARNING :cohorte.composer.isolate.agents.ipopo:HeraldNotify-1 : iPOPO agent: factory missing for RawComponent(echantillonneur-factory, echantillonneur) (ipopo.__try_instantiate() @177)
+2016-03-21 14:22:56,104:WARNING :cohorte.monitor.agent:monitor-agent-stop: >>> Isolate will stop <<< (agent.stop() @102)
+2016-03-21 14:22:56,218:WARNING :cohorte.monitor.agent:monitor-agent-stop: >>> STOPPING isolate <<< (agent.stop() @107)
+2016-03-21 14:22:56,620:INFO    :cohorte.monitor.agent:monitor-agent-stop: Isolate agent invalidated (agent.invalidate() @169)
+2016-03-21 14:22:56,627:INFO    :debug.agent         :Herald-Unbind  : Debug agent Gone (agent.invalidate() @501)
+2016-03-21 14:22:57,567:INFO    :pelix-http-service  :monitor-agent-stop: Shutting down HTTP server: [::]:34856 ... (basic.log() @792)
+2016-03-21 14:22:57,607:INFO    :pelix-http-service  :monitor-agent-stop: Waiting HTTP server ([::]:34856) thread to stop... (basic.log() @792)
+2016-03-21 14:22:57,607:INFO    :pelix-http-service  :monitor-agent-stop: HTTP server down: [::]:34856 ... (basic.log() @792)
+2016-03-21 14:22:57,612:INFO    :cohorte.debug.servlet:monitor-agent-stop: Debug servlet Gone (servlet.invalidate() @376)
+2016-03-21 14:22:57,620:INFO    :pelix.shell.remote  :monitor-agent-stop: RemoteShell gone from port: 37261 (remote.invalidate() @390)
+2016-03-21 14:22:57,620:INFO    :pelix.shell.core    :monitor-agent-stop: Shell services unregistered (core.stop() @838)

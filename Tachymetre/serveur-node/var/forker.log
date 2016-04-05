@@ -1,0 +1,84 @@
+
+   _____ ____  _    _  ____  _____ _______ ______
+  / ____/ __ \| |  | |/ __ \|  __ \__   __|  ____|
+ | |   | |  | | |__| | |  | | |__) | | |  | |__
+ | |   | |  | |  __  | |  | |  _  /  | |  |  __|
+ | |___| |__| | |  | | |__| | | \ \  | |  | |____
+  \_____\____/|_|  |_|\____/|_|  \_\ |_|  |______|
+
+
+     APPLICATION ID : tachymetre
+          NODE NAME : serveur-node
+         TRANSPORTS : http
+
+       TOP COMPOSER : True
+
+          HTTP PORT : 9000
+         SHELL PORT : 9001
+
+   COMPOSITION FILE : composition.js
+         AUTO START : True
+
+
+       COHORTE HOME : /opt/isandlatech/cohorte/cohorte-1.1.1
+       COHORTE BASE : /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/serveur-node
+       COHORTE DATA : /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/serveur-node/data
+ PYTHON INTERPRETER : python
+           LOG FILE : /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/serveur-node/var/forker.log
+
+2016-04-04 17:11:35,762:INFO    :root                :MainThread     : Root log configured. (boot.configure_logger() @476)
+2016-04-04 17:11:35,806:INFO    :cohorte.boot.loaders.forker:MainThread     : Loading a forker with the following properties:
+* Home.....: /opt/isandlatech/cohorte/cohorte-1.1.1
+* Base.....: /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/serveur-node
+* Node UID.: 7ad39a51-5136-485d-8b89-397dbaf5ca4b
+* Node Name: serveur-node
+* Node Data: /home/thibaut/noug/4_eme_annee/Projet/Tachymetre/serveur-node/data
+* UID......: ce18c578-638c-4804-ab3c-86ca95bec612 (forker.load() @253)
+2016-04-04 17:11:35,981:INFO    :pelix.shell.core    :MainThread     : Shell services registered (core.start() @813)
+2016-04-04 17:11:36,076:INFO    :pelix-http-service  :MainThread     : Starting HTTP server: [0.0.0.0]:9000 ... (basic.log() @792)
+2016-04-04 17:11:36,081:INFO    :pelix-http-service  :MainThread     : HTTP server started: [0.0.0.0]:9000 (basic.log() @792)
+2016-04-04 17:11:36,085:INFO    :pelix.shell.remote  :MainThread     : RemoteShell validated on port: 9001 (remote.validate() @373)
+2016-04-04 17:11:36,085:INFO    :cohorte.debug.servlet:MainThread     : Debug servlet Ready (servlet.validate() @365)
+2016-04-04 17:11:36,088:INFO    :debug.agent         :Herald-Bind    : Debug agent Ready (agent.validate() @490)
+2016-04-04 17:11:36,090:INFO    :proxy.proxy         :Herald-Bind    : HTTP Service Proxy validated (proxy.validate() @245)
+2016-04-04 17:11:36,091:INFO    :proxy.proxy         :Herald-Bind    : Bound to / (proxy.bound_to() @260)
+2016-04-04 17:11:36,094:INFO    :herald.core         :Herald-Bind    : No peer in group all (core.fire_group() @706)
+2016-04-04 17:11:36,095:INFO    :cohorte.monitor.status:MainThread     : Monitor status validated (status.validate() @187)
+2016-04-04 17:11:36,231:INFO    :cohorte.repositories.python.modules:MainThread     : Loading repository from file system... (modules.validate() @621)
+2016-04-04 17:11:36,593:INFO    :cohorte.monitor.basic:Thread-2       : Monitor core validated (basic.validate() @485)
+2016-04-04 17:11:37,317:INFO    :debug.debug         :Top-Composer-Loader: Debug REST API validated (api.validate() @474)
+2016-04-04 17:11:37,317:INFO    :debug.debug         :Top-Composer-Loader: Bound to /debug (api.bound_to() @487)
+2016-04-04 17:11:37,328:INFO    :webadmin.webadmin   :Top-Composer-Loader: Webadmin validated (webadmin.validate() @1060)
+2016-04-04 17:11:37,330:INFO    :webadmin.webadmin   :Top-Composer-Loader: Bound to /webadmin (webadmin.bound_to() @1076)
+2016-04-04 17:11:37,334:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Auto-start composition: True (composer.validate() @122)
+2016-04-04 17:11:37,364:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Loading composition... (composer.validate() @129)
+2016-04-04 17:11:37,366:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Started composition: tachymetre -> dad40ded-a887-4f33-b5fa-8ebd8e829b43 (composer.validate() @132)
+2016-04-04 17:11:37,367:INFO    :cohorte.composer.node.top_store:Top-Composer-Loader: Storing top composition dad40ded-a887-4f33-b5fa-8ebd8e829b43 (top_store.store() @114)
+2016-04-04 17:11:38,464:INFO    :herald.core         :iPOPO-repository-loader: No peer in group all (core.fire_group() @706)
+2016-04-04 17:11:43,470:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Using neutral candidate for aggregator (history.vote() @215)
+2016-04-04 17:11:43,471:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for apirest: Neutral (history.vote() @207)
+2016-04-04 17:11:43,472:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for interfaceutilisateur: Neutral (history.vote() @207)
+2016-04-04 17:11:43,472:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-04 17:11:43,473:INFO    :cohorte.composer.node.history:iPOPO-repository-loader: Node composer stored in history:
+{u'web.interface': (u'aggregator',
+                    u'apirest',
+                    u'interfaceutilisateur',
+                    u'serveur')} (history.store() @120)
+2016-04-04 17:15:53,497:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-04 17:15:53,497:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-04 17:15:53,498:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-04 17:15:53,498:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-04 17:20:03,563:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-04 17:20:03,563:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-04 17:20:03,566:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-04 17:20:03,566:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-04 17:20:41,225:INFO    :cohorte.forker.basic:Pelix-Shell-TextConsole: Sending 'forker stopping' signal. (basic._send_stopping() @356)
+2016-04-04 17:20:41,442:INFO    :webadmin.webadmin   :Pelix-Shell-TextConsole: Unbound from /webadmin (webadmin.unbound_from() @1083)
+2016-04-04 17:20:41,443:INFO    :webadmin.webadmin   :Pelix-Shell-TextConsole: Webadmin invalidated (webadmin.invalidate() @1069)
+2016-04-04 17:20:41,445:INFO    :debug.debug         :Pelix-Shell-TextConsole: Unbound from /debug (api.unbound_from() @494)
+2016-04-04 17:20:41,445:INFO    :debug.debug         :Pelix-Shell-TextConsole: Debug REST API invalidated (api.invalidate() @480)
+2016-04-04 17:20:41,450:INFO    :proxy.proxy         :Pelix-Shell-TextConsole: Unbound from / (proxy.unbound_from() @267)
+2016-04-04 17:20:41,450:INFO    :proxy.proxy         :Pelix-Shell-TextConsole: HTTP Service Proxy invalidated (proxy.invalidate() @253)
+2016-04-04 17:20:41,639:INFO    :cohorte.monitor.basic:Pelix-Shell-TextConsole: Monitor core invalidated (basic.invalidate() @511)
+2016-04-04 17:20:41,641:INFO    :cohorte.monitor.status:Pelix-Shell-TextConsole: Monitor status invalidated (status.invalidate() @196)
+2016-04-04 17:20:41,646:INFO    :cohorte.forker.starters.cohorte_boot:forker-core-killer-0: Waiting for isolate 608bc742-6c31-4966-bb2e-39acb527290d (PID: 29567) to stop... (cohorte_boot.stop() @238)

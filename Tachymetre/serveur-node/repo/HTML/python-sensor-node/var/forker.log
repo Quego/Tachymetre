@@ -1,0 +1,82 @@
+
+   _____ ____  _    _  ____  _____ _______ ______
+  / ____/ __ \| |  | |/ __ \|  __ \__   __|  ____|
+ | |   | |  | | |__| | |  | | |__) | | |  | |__
+ | |   | |  | |  __  | |  | |  _  /  | |  |  __|
+ | |___| |__| | |  | | |__| | | \ \  | |  | |____
+  \_____\____/|_|  |_|\____/|_|  \_\ |_|  |______|
+
+
+     APPLICATION ID : speed
+          NODE NAME : python-sensor-node
+         TRANSPORTS : http
+
+       TOP COMPOSER : False
+
+          HTTP PORT : 0
+         SHELL PORT : 0
+
+
+       COHORTE HOME : /opt/islandlatech/cohorte/cohorte-1.1.1
+       COHORTE BASE : /home/quego/Documents/HTML/python-sensor-node
+       COHORTE DATA : /home/quego/Documents/HTML/python-sensor-node/data
+ PYTHON INTERPRETER : python
+           LOG FILE : /home/quego/Documents/HTML/python-sensor-node/var/forker.log
+
+2016-03-21 14:51:14,510:INFO    :root                :MainThread     : Root log configured. (boot.configure_logger() @476)
+2016-03-21 14:51:14,524:INFO    :cohorte.boot.loaders.forker:MainThread     : Loading a forker with the following properties:
+* Home.....: /opt/islandlatech/cohorte/cohorte-1.1.1
+* Base.....: /home/quego/Documents/HTML/python-sensor-node
+* Node UID.: e39da039-b74e-4464-bf0b-eb35bc520fdd
+* Node Name: python-sensor-node
+* Node Data: /home/quego/Documents/HTML/python-sensor-node/data
+* UID......: 4eb4c45a-65d7-4e85-a428-b4a5624c8ac2 (forker.load() @253)
+2016-03-21 14:51:14,601:INFO    :pelix.shell.core    :MainThread     : Shell services registered (core.start() @813)
+2016-03-21 14:51:14,623:INFO    :pelix-http-service  :MainThread     : Starting HTTP server: [::]:0 ... (basic.log() @792)
+2016-03-21 14:51:14,627:INFO    :pelix-http-service  :MainThread     : HTTP server started: [::]:54800 (basic.log() @792)
+2016-03-21 14:51:14,630:INFO    :pelix.shell.remote  :MainThread     : RemoteShell validated on port: 52928 (remote.validate() @373)
+2016-03-21 14:51:14,631:INFO    :proxy.proxy         :Herald-Bind    : HTTP Service Proxy validated (proxy.validate() @245)
+2016-03-21 14:51:14,631:INFO    :proxy.proxy         :Herald-Bind    : Bound to / (proxy.bound_to() @260)
+2016-03-21 14:51:14,632:INFO    :herald.core         :Herald-Bind    : No peer in group all (core.fire_group() @706)
+2016-03-21 14:51:14,635:INFO    :cohorte.debug.servlet:MainThread     : Debug servlet Ready (servlet.validate() @365)
+2016-03-21 14:51:14,638:INFO    :debug.agent         :MainThread     : Debug agent Ready (agent.validate() @490)
+2016-03-21 14:51:14,643:INFO    :cohorte.monitor.status:MainThread     : Monitor status validated (status.validate() @187)
+2016-03-21 14:51:14,720:INFO    :cohorte.composer.node.top_store:HeraldNotify-0 : Storing top composition 7b287162-f7c4-4389-9357-7bf8533b8730 (top_store.store() @114)
+2016-03-21 14:51:14,752:INFO    :cohorte.repositories.python.modules:MainThread     : Loading repository from file system... (modules.validate() @621)
+2016-03-21 14:51:15,149:INFO    :cohorte.monitor.basic:Thread-2       : Monitor core validated (basic.validate() @485)
+2016-03-21 14:51:21,182:INFO    :cohorte.composer.node.criteria.distance.history:HeraldNotify-2 : Using neutral candidate for PythonSensor (history.vote() @215)
+2016-03-21 14:51:21,182:INFO    :cohorte.composer.node.criteria.distance.history:HeraldNotify-2 : Vote preference for PythonSensor2: Neutral (history.vote() @207)
+2016-03-21 14:51:21,182:INFO    :cohorte.composer.node.history:HeraldNotify-2 : Node composer stored in history:
+{'python-sensor-node-python-auto01': (u'PythonSensor', u'PythonSensor2')} (history.store() @120)
+2016-03-21 14:53:21,187:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for PythonSensor: python-sensor-node-python-auto01 (history.vote() @207)
+2016-03-21 14:53:21,188:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for PythonSensor2: python-sensor-node-python-auto01 (history.vote() @207)
+2016-03-21 14:55:21,206:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for PythonSensor: python-sensor-node-python-auto01 (history.vote() @207)
+2016-03-21 14:55:21,206:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for PythonSensor2: python-sensor-node-python-auto01 (history.vote() @207)
+2016-03-21 14:55:42,841:CRITICAL:cohorte.monitor.basic:platform-stop  : >>> PLATFORM STOPPING <<< (basic._stop_platform() @401)
+2016-03-21 14:55:42,875:INFO    :cohorte.forker.starters.cohorte_boot:platform-stop  : Waiting for isolate 103265a9-fa8a-4c07-9ad3-154af5c04e22 (PID: 3270) to stop... (cohorte_boot.stop() @238)
+2016-03-21 14:55:43,730:INFO    :cohorte.forker.starters.cohorte_boot:platform-stop  : Isolate stopped: 103265a9-fa8a-4c07-9ad3-154af5c04e22 (3270) (cohorte_boot.stop() @240)
+2016-03-21 14:55:43,731:INFO    :cohorte.forker.basic:platform-stop  : Sending 'forker stopping' signal. (basic._send_stopping() @356)
+2016-03-21 14:55:44,144:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: 1 crash(es) in history:
+- PythonSensor, PythonSensor2 (history.on_crash() @132)
+2016-03-21 14:55:44,296:INFO    :proxy.proxy         :platform-stop  : Unbound from / (proxy.unbound_from() @267)
+2016-03-21 14:55:44,297:INFO    :proxy.proxy         :platform-stop  : HTTP Service Proxy invalidated (proxy.invalidate() @253)
+2016-03-21 14:55:44,381:INFO    :cohorte.monitor.basic:platform-stop  : Monitor core invalidated (basic.invalidate() @511)
+2016-03-21 14:55:44,382:INFO    :cohorte.monitor.status:platform-stop  : Monitor status invalidated (status.invalidate() @196)
+2016-03-21 14:55:44,383:INFO    :cohorte.forker.basic:platform-stop  : Forker invalidated (basic._invalidate() @438)
+2016-03-21 14:55:47,402:WARNING :IOWatcher-Notify    :platform-stop  : Thread IOWatcher-Notify-0 is still alive... (threadpool.stop() @297)
+2016-03-21 14:55:49,149:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Using neutral candidate for PythonSensor (history.vote() @215)
+2016-03-21 14:55:49,149:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Known bad solution for PythonSensor2:
+PythonSensor, PythonSensor2
+due to:
+PythonSensor, PythonSensor2 (history.vote() @193)
+2016-03-21 14:55:49,149:INFO    :cohorte.composer.node.criteria.distance.history:IOWatcher-Notify-0: Using neutral candidate for PythonSensor2 (history.vote() @215)
+2016-03-21 14:55:49,149:INFO    :cohorte.composer.node.history:IOWatcher-Notify-0: Node composer stored in history:
+{'None-python-auto02': (u'PythonSensor2',),
+ 'None-python-auto03': (u'PythonSensor',)} (history.store() @120)
+2016-03-21 14:55:49,172:INFO    :debug.agent         :platform-stop  : Debug agent Gone (agent.invalidate() @501)
+2016-03-21 14:55:49,172:INFO    :cohorte.debug.servlet:platform-stop  : Debug servlet Gone (servlet.invalidate() @376)
+2016-03-21 14:55:49,436:INFO    :pelix.shell.remote  :platform-stop  : RemoteShell gone from port: 52928 (remote.invalidate() @390)
+2016-03-21 14:55:49,437:INFO    :pelix.shell.core    :platform-stop  : Shell services unregistered (core.stop() @838)
+2016-03-21 14:55:50,303:INFO    :pelix-http-service  :platform-stop  : Shutting down HTTP server: [::]:54800 ... (basic.log() @792)
+2016-03-21 14:55:50,768:INFO    :pelix-http-service  :platform-stop  : Waiting HTTP server ([::]:54800) thread to stop... (basic.log() @792)
+2016-03-21 14:55:50,769:INFO    :pelix-http-service  :platform-stop  : HTTP server down: [::]:54800 ... (basic.log() @792)
