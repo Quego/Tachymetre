@@ -4,7 +4,7 @@
     "properties" : {
         
     "herald.application.id" : "tachymetre",
-    "cohorte.node.data.dir" : "/home/quego/Documents/Project/Tachymetre/Tachymetre/serveur-node/data"
+    "cohorte.node.data.dir" : "/home/thibaut/noug/4_eme_annee/Projet/github/Tachymetre/serveur-node/data"
 
     }
 }

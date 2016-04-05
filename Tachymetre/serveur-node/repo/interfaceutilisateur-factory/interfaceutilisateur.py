@@ -75,7 +75,7 @@ class Interfaceutilisateur(object):
 			</dl>
 			</div>""".format(min=min,max = max, nb = nb)
 		else:
-			step = (max - min)/10
+			step = (float(max) - float(min))/10.0
 
 			step1 = round(min + step,1)
 			step2 = round(min + 2*step,1)
@@ -303,7 +303,7 @@ class Interfaceutilisateur(object):
 			output += "<p>Aggregator found</p>"
 			history = self._apirest.get_history()
 			output += "\n<table class=\"main\"><tr>"
-			output += '\n'.join((self._make_sensor_part("toto", history["toto"])
+			output += '\n'.join((self._make_sensor_part("Tachymetre", history["Tachymetre"])
 			for name in sorted(history)))
 			output += "\n</tr></table>"
 			output += self._make_histo()
