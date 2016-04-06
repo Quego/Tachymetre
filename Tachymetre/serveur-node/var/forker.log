@@ -26,74 +26,61 @@
  PYTHON INTERPRETER : python
            LOG FILE : /home/thibaut/noug/4_eme_annee/Projet/github/Tachymetre/serveur-node/var/forker.log
 
-2016-04-05 17:25:26,874:INFO    :root                :MainThread     : Root log configured. (boot.configure_logger() @476)
-2016-04-05 17:25:26,918:INFO    :cohorte.boot.loaders.forker:MainThread     : Loading a forker with the following properties:
+2016-04-06 09:04:38,946:INFO    :root                :MainThread     : Root log configured. (boot.configure_logger() @476)
+2016-04-06 09:04:38,999:INFO    :cohorte.boot.loaders.forker:MainThread     : Loading a forker with the following properties:
 * Home.....: /opt/isandlatech/cohorte/cohorte-1.1.1
 * Base.....: /home/thibaut/noug/4_eme_annee/Projet/github/Tachymetre/serveur-node
-* Node UID.: ca1373d2-bf2f-4b10-b212-87f47edab029
+* Node UID.: 3ec07c39-3fd1-4c29-84ac-6b3914fe5229
 * Node Name: serveur-node
 * Node Data: /home/thibaut/noug/4_eme_annee/Projet/github/Tachymetre/serveur-node/data
-* UID......: 73d0f8e9-2696-4c09-a083-571fbdf4c890 (forker.load() @253)
-2016-04-05 17:25:27,075:INFO    :pelix.shell.core    :MainThread     : Shell services registered (core.start() @813)
-2016-04-05 17:25:27,140:INFO    :pelix-http-service  :MainThread     : Starting HTTP server: [0.0.0.0]:9000 ... (basic.log() @792)
-2016-04-05 17:25:27,145:INFO    :pelix-http-service  :MainThread     : HTTP server started: [0.0.0.0]:9000 (basic.log() @792)
-2016-04-05 17:25:27,149:INFO    :pelix.shell.remote  :MainThread     : RemoteShell validated on port: 9001 (remote.validate() @373)
-2016-04-05 17:25:27,151:INFO    :cohorte.debug.servlet:MainThread     : Debug servlet Ready (servlet.validate() @365)
-2016-04-05 17:25:27,151:INFO    :proxy.proxy         :Herald-Bind    : HTTP Service Proxy validated (proxy.validate() @245)
-2016-04-05 17:25:27,152:INFO    :proxy.proxy         :Herald-Bind    : Bound to / (proxy.bound_to() @260)
-2016-04-05 17:25:27,152:INFO    :debug.agent         :MainThread     : Debug agent Ready (agent.validate() @490)
-2016-04-05 17:25:27,154:INFO    :herald.core         :Herald-Bind    : No peer in group all (core.fire_group() @706)
-2016-04-05 17:25:27,160:INFO    :cohorte.monitor.status:MainThread     : Monitor status validated (status.validate() @187)
-2016-04-05 17:25:27,281:INFO    :cohorte.repositories.python.modules:MainThread     : Loading repository from file system... (modules.validate() @621)
-2016-04-05 17:25:27,658:INFO    :cohorte.monitor.basic:Thread-2       : Monitor core validated (basic.validate() @485)
-2016-04-05 17:25:28,273:INFO    :debug.debug         :Top-Composer-Loader: Debug REST API validated (api.validate() @474)
-2016-04-05 17:25:28,274:INFO    :debug.debug         :Top-Composer-Loader: Bound to /debug (api.bound_to() @487)
-2016-04-05 17:25:28,285:INFO    :webadmin.webadmin   :Top-Composer-Loader: Webadmin validated (webadmin.validate() @1060)
-2016-04-05 17:25:28,285:INFO    :webadmin.webadmin   :Top-Composer-Loader: Bound to /webadmin (webadmin.bound_to() @1076)
-2016-04-05 17:25:28,287:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Auto-start composition: True (composer.validate() @122)
-2016-04-05 17:25:28,313:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Loading composition... (composer.validate() @129)
-2016-04-05 17:25:28,314:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Started composition: tachymetre -> 012e31a0-075f-4fd4-b4e0-90d9ca62b086 (composer.validate() @132)
-2016-04-05 17:25:28,315:INFO    :cohorte.composer.node.top_store:Top-Composer-Loader: Storing top composition 012e31a0-075f-4fd4-b4e0-90d9ca62b086 (top_store.store() @114)
-2016-04-05 17:25:29,111:INFO    :herald.core         :iPOPO-repository-loader: No peer in group all (core.fire_group() @706)
-2016-04-05 17:25:34,118:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Using neutral candidate for aggregator (history.vote() @215)
-2016-04-05 17:25:34,118:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for apirest: Neutral (history.vote() @207)
-2016-04-05 17:25:34,119:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for interfaceutilisateur: Neutral (history.vote() @207)
-2016-04-05 17:25:34,120:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for serveur: web.interface (history.vote() @207)
-2016-04-05 17:25:34,121:INFO    :cohorte.composer.node.history:iPOPO-repository-loader: Node composer stored in history:
+* UID......: 13b5fc7b-1014-439e-82f0-9aa9e68b357f (forker.load() @253)
+2016-04-06 09:04:39,184:INFO    :pelix.shell.core    :MainThread     : Shell services registered (core.start() @813)
+2016-04-06 09:04:39,258:INFO    :pelix-http-service  :MainThread     : Starting HTTP server: [0.0.0.0]:9000 ... (basic.log() @792)
+2016-04-06 09:04:39,264:INFO    :pelix-http-service  :MainThread     : HTTP server started: [0.0.0.0]:9000 (basic.log() @792)
+2016-04-06 09:04:39,271:INFO    :pelix.shell.remote  :MainThread     : RemoteShell validated on port: 9001 (remote.validate() @373)
+2016-04-06 09:04:39,275:INFO    :cohorte.debug.servlet:MainThread     : Debug servlet Ready (servlet.validate() @365)
+2016-04-06 09:04:39,279:INFO    :herald.core         :Herald-Bind    : No peer in group all (core.fire_group() @706)
+2016-04-06 09:04:39,281:INFO    :debug.agent         :MainThread     : Debug agent Ready (agent.validate() @490)
+2016-04-06 09:04:39,285:INFO    :proxy.proxy         :Herald-Bind    : HTTP Service Proxy validated (proxy.validate() @245)
+2016-04-06 09:04:39,285:INFO    :proxy.proxy         :Herald-Bind    : Bound to / (proxy.bound_to() @260)
+2016-04-06 09:04:39,295:INFO    :cohorte.monitor.status:MainThread     : Monitor status validated (status.validate() @187)
+2016-04-06 09:04:39,440:INFO    :cohorte.repositories.python.modules:MainThread     : Loading repository from file system... (modules.validate() @621)
+2016-04-06 09:04:39,794:INFO    :cohorte.monitor.basic:Thread-2       : Monitor core validated (basic.validate() @485)
+2016-04-06 09:04:40,620:INFO    :debug.debug         :Top-Composer-Loader: Debug REST API validated (api.validate() @474)
+2016-04-06 09:04:40,621:INFO    :debug.debug         :Top-Composer-Loader: Bound to /debug (api.bound_to() @487)
+2016-04-06 09:04:40,634:INFO    :webadmin.webadmin   :Top-Composer-Loader: Webadmin validated (webadmin.validate() @1060)
+2016-04-06 09:04:40,635:INFO    :webadmin.webadmin   :Top-Composer-Loader: Bound to /webadmin (webadmin.bound_to() @1076)
+2016-04-06 09:04:40,640:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Auto-start composition: True (composer.validate() @122)
+2016-04-06 09:04:40,643:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Loading composition... (composer.validate() @129)
+2016-04-06 09:04:40,645:INFO    :cohorte.composer.top.composer:Top-Composer-Loader: Started composition: tachymetre -> 5015cce6-8c3c-4eb1-bd66-c51311b1dff3 (composer.validate() @132)
+2016-04-06 09:04:40,646:INFO    :cohorte.composer.node.top_store:Top-Composer-Loader: Storing top composition 5015cce6-8c3c-4eb1-bd66-c51311b1dff3 (top_store.store() @114)
+2016-04-06 09:04:46,632:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Using neutral candidate for aggregator (history.vote() @215)
+2016-04-06 09:04:46,633:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for apirest: Neutral (history.vote() @207)
+2016-04-06 09:04:46,633:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for interfaceutilisateur: Neutral (history.vote() @207)
+2016-04-06 09:04:46,634:INFO    :cohorte.composer.node.criteria.distance.history:iPOPO-repository-loader: Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:04:46,635:INFO    :cohorte.composer.node.history:iPOPO-repository-loader: Node composer stored in history:
 {u'web.interface': (u'aggregator',
                     u'apirest',
                     u'interfaceutilisateur',
                     u'serveur')} (history.store() @120)
-2016-04-05 17:26:53,310:ERROR   :InstanceManager-cohorte-composer-top-storage-handler:HeraldNotify-7 : Component 'cohorte-composer-top-storage-handler' : error calling callback method for event BIND_FIELD (instance.__safe_field_callback() @593)
-Traceback (most recent call last):
-  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/pelix/ipopo/instance.py", line 575, in __safe_field_callback
-    return self.__field_callback(field, event, *args, **kwargs)
-  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/pelix/ipopo/instance.py", line 512, in __field_callback
-    result = callback(self.instance, field, *args, **kwargs)
-  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/cohorte/composer/top/store_handler.py", line 89, in _bind_store
-    self.handle_store(svc)
-  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/cohorte/composer/top/store_handler.py", line 166, in handle_store
-    self._composer.reload_distribution(name, distribution, uid)
-  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/cohorte/composer/top/composer.py", line 206, in reload_distribution
-    return self.__start(name, distribution, uid)
-  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/cohorte/composer/top/composer.py", line 164, in __start
-    uid = self._status.store(name, distribution, uid)
-  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/cohorte/composer/top/status.py", line 125, in store
-    raise ValueError("Already used composition name: {0}".format(name))
-ValueError: Already used composition name: tachymetre
-2016-04-05 17:29:44,164:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for aggregator: web.interface (history.vote() @207)
-2016-04-05 17:29:44,165:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for apirest: web.interface (history.vote() @207)
-2016-04-05 17:29:44,166:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for serveur: web.interface (history.vote() @207)
-2016-04-05 17:33:54,204:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for aggregator: web.interface (history.vote() @207)
-2016-04-05 17:33:54,205:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for apirest: web.interface (history.vote() @207)
-2016-04-05 17:33:54,206:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for serveur: web.interface (history.vote() @207)
-2016-04-05 17:36:31,059:INFO    :cohorte.forker.basic:Pelix-Shell-TextConsole: Sending 'forker stopping' signal. (basic._send_stopping() @356)
-2016-04-05 17:36:31,527:INFO    :webadmin.webadmin   :Pelix-Shell-TextConsole: Unbound from /webadmin (webadmin.unbound_from() @1083)
-2016-04-05 17:36:31,528:INFO    :webadmin.webadmin   :Pelix-Shell-TextConsole: Webadmin invalidated (webadmin.invalidate() @1069)
-2016-04-05 17:36:31,528:INFO    :debug.debug         :Pelix-Shell-TextConsole: Unbound from /debug (api.unbound_from() @494)
-2016-04-05 17:36:31,528:INFO    :debug.debug         :Pelix-Shell-TextConsole: Debug REST API invalidated (api.invalidate() @480)
-2016-04-05 17:36:31,532:INFO    :proxy.proxy         :Pelix-Shell-TextConsole: Unbound from / (proxy.unbound_from() @267)
-2016-04-05 17:36:31,532:INFO    :proxy.proxy         :Pelix-Shell-TextConsole: HTTP Service Proxy invalidated (proxy.invalidate() @253)
-2016-04-05 17:36:31,737:INFO    :cohorte.monitor.basic:Pelix-Shell-TextConsole: Monitor core invalidated (basic.invalidate() @511)
-2016-04-05 17:36:31,740:INFO    :cohorte.monitor.status:Pelix-Shell-TextConsole: Monitor status invalidated (status.invalidate() @196)
-2016-04-05 17:36:31,749:INFO    :cohorte.forker.starters.cohorte_boot:forker-core-killer-0: Waiting for isolate 915b6ffa-3424-438a-b92b-930af4d3d180 (PID: 7930) to stop... (cohorte_boot.stop() @238)
+2016-04-06 09:04:46,637:INFO    :herald.core         :iPOPO-repository-loader: No peer in group all (core.fire_group() @706)
+2016-04-06 09:08:56,667:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-06 09:08:56,667:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-06 09:08:56,668:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-06 09:08:56,669:INFO    :cohorte.composer.node.criteria.distance.history:Thread-3       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:13:06,705:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-06 09:13:06,710:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-06 09:13:06,713:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-06 09:13:06,714:INFO    :cohorte.composer.node.criteria.distance.history:Thread-4       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:17:16,784:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-06 09:17:16,785:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-06 09:17:16,787:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-06 09:17:16,788:INFO    :cohorte.composer.node.criteria.distance.history:Thread-5       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:21:26,819:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-06 09:21:26,820:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-06 09:21:26,821:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-06 09:21:26,824:INFO    :cohorte.composer.node.criteria.distance.history:Thread-6       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:25:36,884:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-06 09:25:36,886:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-06 09:25:36,887:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-06 09:25:36,887:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for serveur: web.interface (history.vote() @207)
