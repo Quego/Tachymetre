@@ -84,3 +84,22 @@
 2016-04-06 09:25:36,886:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for apirest: web.interface (history.vote() @207)
 2016-04-06 09:25:36,887:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
 2016-04-06 09:25:36,887:INFO    :cohorte.composer.node.criteria.distance.history:Thread-7       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:29:46,926:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-06 09:29:46,928:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-06 09:29:46,929:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-06 09:29:46,929:INFO    :cohorte.composer.node.criteria.distance.history:Thread-8       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:33:56,950:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for aggregator: web.interface (history.vote() @207)
+2016-04-06 09:33:56,952:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for apirest: web.interface (history.vote() @207)
+2016-04-06 09:33:56,953:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for interfaceutilisateur: web.interface (history.vote() @207)
+2016-04-06 09:33:56,954:INFO    :cohorte.composer.node.criteria.distance.history:Thread-9       : Vote preference for serveur: web.interface (history.vote() @207)
+2016-04-06 09:37:27,108:ERROR   :pelix.shell.core    :Pelix-Shell-TextConsole: Error calling forker.shutdown: 'monitors' (parser.execute() @472)
+Traceback (most recent call last):
+  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/pelix/shell/parser.py", line 454, in execute
+    result = method(session, *args, **kwargs)
+  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/cohorte/shell/forker.py", line 148, in shutdown
+    self._herald.fire_group('monitors', msg)
+  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/herald/core.py", line 704, in fire_group
+    all_peers = self._directory.get_peers_for_group(group)
+  File "/opt/isandlatech/cohorte/cohorte-1.1.1/repo/herald/directory.py", line 376, in get_peers_for_group
+    return self._groups[group].copy()
+KeyError: 'monitors'
